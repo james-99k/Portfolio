@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+}
+
+.max-width {
+  max-width: 1300px;
+  padding: 0 80px;
+  margin: auto;
+}
+
+.navbar {
+  position: fixed;
+  width: 100%;
+  padding: 30px 0;
+  font-family: 'Ubuntu', sans-serif;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky {
+  padding: 15px 0;
+  background: blue;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.navbar.sticky .logo a span {
+  color: white;
+}
+
+.navbar.sticky .menu li a:hover {
+  color: white;
+}
+
+.navbar .max-width {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .logo a {
+  color: white;
+  font-size: 35px;
+  font-weight: 600;
+}
+
+.navbar .logo a span {
+  color: blue;
+}
+
+.navbar .menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+.navbar .menu li a {
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  margin-left: 25px;
+  -webkit-transition: color 0.3s ease;
+  transition: color 0.3s ease;
+}
+
+.navbar .menu li a:hover {
+  color: blue;
+}
+
+.menu__button {
+  color: white;
+  font-size: 23px;
+  cursor: pointer;
+  display: none;
+}
+
+.home {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background: url("Images/background.png");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100vh;
+  color: white;
+  min-height: 500px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.home .max-width {
+  margin: auto 0 auto 40px;
+}
+
+.home__content--text-1 {
+  font-size: 27px;
+}
+
+.home__content--text-2 {
+  font-size: 75px;
+  font-weight: 600;
+  margin-left: -3px;
+}
+
+.home__content--text-3 {
+  font-size: 40px;
+  margin: 5px 0;
+}
+
+.home__content--text-3 span {
+  color: blue;
+  font-weight: 500;
+}
+
+.home__content a {
+  display: inline-block;
+  background: blue;
+  color: white;
+  font-size: 25px;
+  padding: 12px 36px;
+  margin-top: 20px;
+  border-radius: 6px;
+  border: 2px solid blue;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.home__content a:hover {
+  color: blue;
+  background: none;
+}
+
+@media (max-width: 1104px) {
+  .home .max-width {
+    margin-left: 0px;
+  }
+}
+
+@media (max-width: 990px) {
+  .max-width {
+    padding: 0 50px;
+  }
+}
+
+@media (max-width: 947px) {
+  .navbar .menu {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    left: -100%;
+    top: 0;
+    background: black;
+    text-align: center;
+    padding-top: 80px;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+  }
+  .navbar .menu.active {
+    left: 0;
+  }
+  .navbar .menu li {
+    display: block;
+  }
+  .navbar .menu li a {
+    display: inline-block;
+    margin: 20px 0;
+    font-size: 25px;
+  }
+  .navbar .menu__button {
+    display: block;
+    z-index: 999;
+  }
+  .navbar .menu__button i.active:before {
+    content: "\f00d";
+  }
+  .home__content--text-2 {
+    font-size: 70px;
+  }
+  .home__content--text-3 {
+    font-size: 35px;
+  }
+  .home__content a {
+    font-size: 23px;
+    padding: 10px 30px;
+  }
+}
+
+@media (max-width: 690px) {
+  .max-width {
+    padding: 0 23px;
+  }
+  .home__content--text-2 {
+    font-size: 40px;
+  }
+  .home__content--text-3 {
+    font-size: 32px;
+  }
+  .home__content a {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .home__content--text-2 {
+    font-size: 30px;
+  }
+  .home__content--text-3 {
+    font-size: 27px;
+  }
+}
+/*# sourceMappingURL=style.css.map */
