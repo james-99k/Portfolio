@@ -173,9 +173,9 @@ section {
         }
 
         &::after {
-            content: "Who i am";
+            content: "";
             position: absolute;
-            bottom: -12px;
+            bottom: -15px;
             left: 50%;
             font-size: 20px;
             color: $blue;
@@ -238,6 +238,216 @@ section {
         }
     }
 }
+
+// Services style
+
+.services {
+    font-family: 'Poppins', sans-serif;
+    background: black;
+    color: white;
+
+    .title {
+        position: relative;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            width: 180px;
+            height: 4px;
+            background: white;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            font-size: 20px;
+            color: $blue;
+            padding: 5px;
+            background: black;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+
+        .card {
+            width: calc(50% - 20px);
+            background: rgb(21, 33, 58);
+            text-align: center;
+            border-radius: 6px;
+            padding: 20px 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            .box {
+                transition: all 0.3s ease;
+                
+                i {
+                    font-size: 50px;
+                    color: $blue;
+                }
+    
+                .text {
+                    font-size: 25px;
+                    font-weight: 500;
+                    margin: 10px 0 7px 0;
+                }
+            }
+
+            &:hover {
+                background: $blue;
+
+                i {
+                    color: white;
+                    transition: color 0.3s ease;
+                }
+            }
+
+            &:hover .box {
+                transform: scale(1.05);
+            }
+        }
+    }
+}
+
+// Skills style
+
+.skills {
+    font-family: 'Poppins', sans-serif;
+
+    .title {
+        position: relative;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            width: 180px;
+            height: 4px;
+            background: black;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            font-size: 20px;
+            color: $blue;
+            padding: 5px;
+            background: white;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 50px;
+        border-bottom: 2px solid gray;
+
+        .column {
+
+            &__left {
+                width: 80%;
+                
+                .text {
+                    font-size: 20px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+                }
+
+                p {
+                    text-align: justify;
+                }
+
+                a{
+                    display: inline-block;
+                    background: $blue;
+                    color: white;
+                    font-size: 18px;
+                    font-weight: 500;
+                    padding: 8px 16px;
+                    margin-top: 20px;
+                    border-radius: 6px;
+                    border: 2px solid $blue;
+                    transition: all 0.3s ease;
+    
+                    &:hover {
+                        color: $blue;
+                        background: none;
+                    }
+                }
+            }
+
+            &__right {
+                width: 20%;
+                padding: 30px;
+                display: flex;
+                flex-direction: column;
+
+                .row {
+                    display: flex;
+                    justify-content: space-between;
+    
+                    .icons {
+                        font-size: 50px;
+                        margin-bottom: 15px;
+    
+                        .html5 {
+                            color: #e34c26;
+                        }
+
+                        .css3 {
+                            color: #264de4;
+                        }
+
+                        .sass {
+                            color: #c69;
+                        }
+
+                        .js {
+                            color: #f0db4f;
+                        }
+                        
+                        .logo {
+                            height: 50px;
+                            width: 50px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
 
 // responsive query
 @media (max-width: 1300px){
@@ -349,6 +559,38 @@ section {
     .max-width {
         max-width: 800px;
     }
+
+    .skills {
+
+        &__content {
+
+            .column{
+                width: 100%;
+                margin-bottom: 25px;
+
+                &__right {
+                    flex-direction: row;
+                    justify-content: space-around;
+                    padding: 10px;
+                    
+                    .row {
+                        width: 100%;
+                        display: flex;
+                        justify-content: space-around;
+                    
+                        .icons {
+                            font-size: 100px;
+
+                            .logo {
+                                height: 100px;
+                                width: 100px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 690px){
@@ -372,6 +614,17 @@ section {
 
             a {
                 font-size: 20px;
+            }
+        }
+    }
+
+    .services {
+
+        &__content {
+
+            .card {
+                width: 100%;
+                margin-bottom: 20px;
             }
         }
     }
