@@ -5,8 +5,10 @@
     box-sizing: border-box;
     text-decoration: none;
 }
+// colors
+$blue: rgb(19, 19, 114);
 
-// navbar styling
+// Navbar styling
 .max-width{
     max-width: 1300px;
     padding: 0 80px;
@@ -19,10 +21,11 @@
     padding: 30px 0;
     font-family: 'Ubuntu', sans-serif;
     transition: all 0.3s ease;
+    z-index: 999;
 
     &.sticky {
         padding: 15px 0;
-        background: blue;
+        background: $blue;
         transition: all 0.3s ease;
 
         .logo a span {
@@ -46,7 +49,7 @@
             font-weight: 600;
 
             span {
-                color: blue;
+                color: $blue;
             }
         }
     }
@@ -64,7 +67,7 @@
                 transition: color 0.3s ease;
 
                 &:hover {
-                    color: blue;
+                    color: $blue;
                 }
             }
         } 
@@ -117,25 +120,98 @@
                 margin: 5px 0;
 
                 span {
-                    color: blue;
+                    color: $blue;
                     font-weight: 500;
                 }
             }
         }
         a {
             display: inline-block;
-            background: blue;
+            background: $blue;
             color: white;
             font-size: 25px;
             padding: 12px 36px;
             margin-top: 20px;
             border-radius: 6px;
-            border: 2px solid blue;
+            border: 2px solid $blue;
             transition: all 0.3s ease;
 
             &:hover {
-                color: blue;
+                color: $blue;
                 background: none;
+            }
+        }
+    }
+}
+
+// About section style 
+
+section {
+    padding: 100px 0;
+}
+.about {
+    font-family: 'Poppins', sans-serif;
+
+    .title {
+        position: relative;
+        text-align: center;
+        font-family: 'Ubuntu', sans-serif;
+        font-size: 40px;
+        font-weight: 500;
+        margin-bottom: 60px;
+        padding-bottom: 20px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0px;
+            left: 50%;
+            width: 180px;
+            height: 4px;
+            background: black;
+            transform: translateX(-50%);
+        }
+
+        &::after {
+            content: "Who i am";
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            font-size: 20px;
+            color: $blue;
+            padding: 5px;
+            background: white;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__content {
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        justify-content: space-between;
+
+        .column__left {
+            width: 45%;
+
+            img {
+                height: 400px;
+                width: 400px;
+                object-fit: cover;
+                border-radius: 6px;
+            }
+        }
+        .column__right {
+            width: 55%;
+
+            .text {
+                font-size: 25px;
+                font-weight: 600;
+                margin-bottom: 10px;
+
+                span {
+                    color: $blue;
+                }
             }
         }
     }

@@ -20,11 +20,12 @@
   font-family: 'Ubuntu', sans-serif;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  z-index: 999;
 }
 
 .navbar.sticky {
   padding: 15px 0;
-  background: blue;
+  background: #131372;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -56,7 +57,7 @@
 }
 
 .navbar .logo a span {
-  color: blue;
+  color: #131372;
 }
 
 .navbar .menu li {
@@ -74,7 +75,7 @@
 }
 
 .navbar .menu li a:hover {
-  color: blue;
+  color: #131372;
 }
 
 .menu__button {
@@ -117,26 +118,109 @@
 }
 
 .home__content--text-3 span {
-  color: blue;
+  color: #131372;
   font-weight: 500;
 }
 
 .home__content a {
   display: inline-block;
-  background: blue;
+  background: #131372;
   color: white;
   font-size: 25px;
   padding: 12px 36px;
   margin-top: 20px;
   border-radius: 6px;
-  border: 2px solid blue;
+  border: 2px solid #131372;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 
 .home__content a:hover {
-  color: blue;
+  color: #131372;
   background: none;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.about {
+  font-family: 'Poppins', sans-serif;
+}
+
+.about .title {
+  position: relative;
+  text-align: center;
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+}
+
+.about .title::before {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  width: 180px;
+  height: 4px;
+  background: black;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.about .title::after {
+  content: "Who i am";
+  position: absolute;
+  bottom: -12px;
+  left: 50%;
+  font-size: 20px;
+  color: #131372;
+  padding: 5px;
+  background: white;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.about__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.about__content .column__left {
+  width: 45%;
+}
+
+.about__content .column__left img {
+  height: 400px;
+  width: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+
+.about__content .column__right {
+  width: 55%;
+}
+
+.about__content .column__right .text {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.about__content .column__right .text span {
+  color: #131372;
 }
 
 @media (max-width: 1104px) {
