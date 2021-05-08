@@ -6,8 +6,8 @@
     text-decoration: none;
 }
 // colors
-$blue: rgb(19, 19, 114);
-
+$blue: #000080;
+$dark: #181818;
 
 html{
     scroll-behavior: smooth;
@@ -201,7 +201,7 @@ section {
             left: 50%;
             width: 180px;
             height: 4px;
-            background: black;
+            background: $dark;
             transform: translateX(-50%);
         }
     }
@@ -264,7 +264,7 @@ section {
 
 .services {
     font-family: 'Poppins', sans-serif;
-    background: black;
+    background: $dark;
     color: white;
 
     .title {
@@ -295,7 +295,7 @@ section {
             font-size: 20px;
             color: $blue;
             padding: 5px;
-            background: black;
+            background: $dark;
             transform: translateX(-50%);
         }
     }
@@ -308,7 +308,8 @@ section {
 
         .card {
             width: calc(50% - 20px);
-            background: rgb(21, 33, 58);
+            background: white;
+            color: $dark;
             text-align: center;
             border-radius: 6px;
             padding: 20px 25px;
@@ -332,6 +333,7 @@ section {
 
             &:hover {
                 background: $blue;
+                color: white;
 
                 i {
                     color: white;
@@ -359,6 +361,7 @@ section {
         font-weight: 500;
         margin-bottom: 60px;
         padding-bottom: 20px;
+        color: $dark;
 
         &::before {
             content: "";
@@ -367,7 +370,7 @@ section {
             left: 50%;
             width: 180px;
             height: 4px;
-            background: black;
+            background: $dark;
             transform: translateX(-50%);
         }
     }
@@ -547,7 +550,7 @@ section {
 
 .team {
     font-family: 'Poppins', sans-serif;
-    background: black;
+    background: $dark;
     color: white;
 
     .title {
@@ -653,7 +656,7 @@ section {
 .contact {
     font-family: 'Poppins', sans-serif;
     background: white;
-    color: black;
+    color: $dark;
 
     .title {
         position: relative;
@@ -671,7 +674,7 @@ section {
             left: 50%;
             width: 180px;
             height: 4px;
-            background: black;
+            background: $dark;
             transform: translateX(-50%);
         }
     }
@@ -812,7 +815,7 @@ section {
 
 footer {
     font-family: 'Poppins', sans-serif;
-    background: black;
+    background: $dark;
     color: white;
     padding: 20px 23px;
     
@@ -900,7 +903,7 @@ footer {
             width: 100%;
             left: -100%;
             top: 0;
-            background: black;
+            background: $dark;
             text-align: center;
             padding-top: 80px;
             transition: all 0.3s ease;
@@ -1018,6 +1021,7 @@ footer {
     }
 
     .home {
+        background: $dark;
         &__content {
 
             &--text {
